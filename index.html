@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Filip Studenovsky | Mechanical Engineering Portfolio</title>
+<meta name="description" content="Mechanical engineering student at Washington State University. Projects in FEA, CFD, and materials testing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #0b111c;
+    --ink: #f4f6f9;
+    --muted: #9ba7b8;
+    --line: #232d40;
+    --accent: #a9c8ec;
+    --tint: #131b2b;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+  h1, h2, h3 {
+    font-family: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.1;
+    margin: 0;
+  }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+
+  /* Hero */
+  .hero { position: relative; padding: 88px 0 64px; overflow: hidden; }
+  .hero .wrap { position: relative; }
+  h1 { font-size: clamp(2.6rem, 8vw, 4.75rem); font-weight: 700; letter-spacing: -0.02em; }
+  .tagline { max-width: 34em; margin: 20px 0 0; font-size: 1.25rem; color: var(--ink); }
+  .facts { margin: 12px 0 0; color: var(--muted); }
+  .links { display: flex; flex-wrap: wrap; gap: 12px 24px; margin: 28px 0 0; padding: 0; list-style: none; font-weight: 600; }
+
+  /* Projects */
+  h2 { font-size: 1.6rem; font-weight: 700; padding-bottom: 16px; }
+  .project {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 12px 32px;
+    padding: 36px 0;
+    border-top: 1px solid var(--line);
+  }
+  .project.no-image { grid-template-columns: 1fr; }
+  .project figure { margin: 0; }
+  .project img {
+    display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+    background: var(--tint); border-radius: 4px;
+  }
+  .project h3 { font-size: 1.4rem; font-weight: 600; }
+  .project .context { margin: 4px 0 0; color: var(--muted); }
+  .project .summary { margin: 14px 0 0; max-width: 38em; }
+  .project .result { margin: 12px 0 0; font-weight: 600; max-width: 38em; }
+  .project .tags { margin: 12px 0 0; color: var(--muted); font-size: 0.95rem; }
+  .project .plinks { margin: 12px 0 0; display: flex; gap: 20px; flex-wrap: wrap; font-weight: 600; }
+
+  /* Footer */
+  footer { margin-top: 24px; padding: 40px 0 64px; border-top: 1px solid var(--line); color: var(--muted); }
+  footer p { margin: 0 0 6px; }
+
+  @media (max-width: 680px) {
+    .hero { padding: 56px 0 40px; }
+    .project { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Filip Studenovsky</h1>
+    <p class="tagline">Mechanical engineering student at Washington State University, interested in aviation.</p>
+    <p class="facts">BS Mechanical Engineering, expected May 2028. Based in Bothell, WA. SOLIDWORKS certified (CSWA, CSWA-Simulation).</p>
+    <ul class="links">
+      <li><a href="Filip_Studenovsky_Resume.pdf">Resume (PDF)</a></li>
+      <li><a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a></li>
+      <li><a href="https://www.linkedin.com/in/YOUR-LINKEDIN">LinkedIn</a></li>
+      <li><a href="https://github.com/YOUR-GITHUB">GitHub</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="wrap">
+  <h2>Projects</h2>
+  <div id="projects"></div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Filip Studenovsky, Bothell, WA</p>
+    <p><a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a></p>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   ADD A PROJECT: copy one block below, paste it at the TOP of the
+   list, and edit the text. Leave `image` as "" for no picture.
+   `image` is either a file path like "images/name.png" (picture in
+   the images folder) or a name from the IMAGES section at the bottom.
+   Every field is optional except `title`.
+   ============================================================ */
+const PROJECTS = [
+
+  // Template for your next project (delete the // marks to use it):
+  // {
+  //   title: "Saturn V Launch Simulation",
+  //   context: "Personal project, Summer 2026",
+  //   summary: "What you built and why, in one or two sentences.",
+  //   result: "The number or outcome that shows it worked.",
+  //   tags: ["Unity", "C#", "Guidance control"],
+  //   image: "images/saturn-v.jpg",
+  //   links: [{ label: "Watch the demo", url: "https://..." }, { label: "Code on GitHub", url: "https://github.com/..." }]
+  // },
+
+  {
+    title: "Truck Drag Reduction (2D CFD)",
+    context: "ME 216 coursework",
+    summary: "Designed a truck profile, ran a 2D CFD study at 60 mph to find its drag, then redesigned the shape to reduce it.",
+    result: "Drag fell from 159.0 N to 105.3 N, a 34% reduction.",
+    tags: ["CFD", "SOLIDWORKS Flow Simulation", "Aerodynamics"],
+    image: "images/truck-cfd.png",
+    links: []
+  },
+  {
+    title: "Scissor Jack Assembly Analysis",
+    context: "ME 216 coursework",
+    summary: "Built an assembly-level finite element model of a scissor car jack in SOLIDWORKS Simulation and sized the links to a factor of safety of 4.",
+    result: "Links meet the target factor of safety of 4.",
+    tags: ["FEA", "SOLIDWORKS Simulation", "Assemblies"],
+    image: "images/scissor-jack.png",
+    links: []
+  },
+  {
+    title: "Flashlight Body Design",
+    context: "ME 216 coursework",
+    summary: "Designed a flashlight body and checked it with a bend test at a factor of safety of 2. Extended the body by 20%, then re-ran the bend and drop tests.",
+    result: "Redesign passed both the bend and drop tests.",
+    tags: ["FEA", "Design iteration", "SOLIDWORKS"],
+    image: "images/flashlight.png",
+    links: []
+  },
+  {
+    title: "Materials and Structures Lab Series",
+    context: "ME 220 coursework",
+    summary: "Ran Charpy impact, tension, fatigue, bridge truss strain gauge, and combined stress tests, then analyzed the data and wrote the lab reports.",
+    result: "Includes an S-N curve comparing polished and shot-peened A-36 steel.",
+    tags: ["Materials testing", "Strain gauges", "Data analysis"],
+    image: "images/materials-lab.png",
+    links: []
+  }
+
+];
+
+</script>
+
+<script>
+/* ============================================================
+   IMAGES (optional): use this ONLY if you want pictures embedded in
+   this file instead of an images folder. Leave it empty otherwise. Format:   "name": "data:image/jpeg;base64,....",
+   Resize pictures to about 1000 px wide and save as JPG first
+   so this file stays small.
+   ============================================================ */
+const IMAGES = {
+  "truck-cfd": "",
+  "scissor-jack": "",
+  "flashlight": "",
+  "materials-lab": ""
+};
+</script>
+
+<script>
+/* ---------- You shouldn't need to edit anything below this line ---------- */
+const root = document.getElementById("projects");
+
+PROJECTS.forEach(p => {
+  const el = document.createElement("article");
+  el.className = "project" + (p.image ? "" : " no-image");
+
+  let html = "";
+  const src = p.image ? (IMAGES[p.image] || p.image) : "";
+  if (src) {
+    html += `<figure><img src="${src}" alt="${p.title}" loading="lazy"></figure>`;
+  }
+  html += `<div><h3>${p.title}</h3>`;
+  if (p.context) html += `<p class="context">${p.context}</p>`;
+  if (p.summary) html += `<p class="summary">${p.summary}</p>`;
+  if (p.result)  html += `<p class="result">${p.result}</p>`;
+  if (p.tags && p.tags.length) html += `<p class="tags">${p.tags.join(", ")}</p>`;
+  if (p.links && p.links.length) {
+    html += `<p class="plinks">` + p.links.map(l => `<a href="${l.url}">${l.label}</a>`).join("") + `</p>`;
+  }
+  html += `</div>`;
+  el.innerHTML = html;
+
+  // If an image is missing, hide the picture instead of showing a broken icon
+  const img = el.querySelector("img");
+  if (img) img.addEventListener("error", () => {
+    el.classList.add("no-image");
+    img.closest("figure").remove();
+  });
+
+  root.appendChild(el);
+});
+</script>
+</body>
+</html>
