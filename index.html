@@ -48,16 +48,15 @@
   /* Projects */
   h2 { font-size: 1.6rem; font-weight: 700; padding-bottom: 16px; }
   .project {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 12px 32px;
-    padding: 36px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 0;
     border-top: 1px solid var(--line);
   }
-  .project.no-image { grid-template-columns: 1fr; }
   .project figure { margin: 0; }
   .project img {
-    display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+    display: block; width: 100%; height: auto;
     background: var(--tint); border-radius: 4px;
   }
   .project h3 { font-size: 1.4rem; font-weight: 600; }
@@ -73,7 +72,6 @@
 
   @media (max-width: 680px) {
     .hero { padding: 56px 0 40px; }
-    .project { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -86,9 +84,9 @@
     <p class="facts">BS Mechanical Engineering, expected May 2028. Based in Bothell, WA. SOLIDWORKS certified (CSWA, CSWA-Simulation).</p>
     <ul class="links">
       <li><a href="Filip_Studenovsky_Resume.pdf">Resume (PDF)</a></li>
-      <li><a href="mailto:filipdstudenovsky@gmail.com">filipdstudenovsky@gmail.com</a></li>
-      <li><a href="https://www.linkedin.com/in/filipstudenovsky">LinkedIn</a></li>
-      <li><a href="https://github.com/filipstudenovsky">GitHub</a></li>
+      <li><a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a></li>
+      <li><a href="https://www.linkedin.com/in/YOUR-LINKEDIN">LinkedIn</a></li>
+      <li><a href="https://github.com/YOUR-GITHUB">GitHub</a></li>
     </ul>
   </div>
 </header>
@@ -101,7 +99,7 @@
 <footer>
   <div class="wrap">
     <p>Filip Studenovsky, Bothell, WA</p>
-    <p><a href="mailto:filipdstudenovsky@gmail.com">filipdstudenovsky@gmail.com</a></p>
+    <p><a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a></p>
   </div>
 </footer>
 
